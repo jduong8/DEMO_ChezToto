@@ -9,8 +9,13 @@ import Foundation
 
 class MenuService {
     
+    let api: API
+    
+    init(api: API = .init()) {
+        self.api = api
+    }
     
     func getMenu() -> [Menu] {
-        return Menu.mockMenus
+        return self.api.getData().map { Menu(with: $0) }
     }
 }

@@ -17,7 +17,6 @@
 		13AA31882B0CC4850012E612 /* DEMO_ChezTotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31872B0CC4850012E612 /* DEMO_ChezTotoUITests.swift */; };
 		13AA318A2B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31892B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift */; };
 		13AA31982B0CC6500012E612 /* totoDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = 13AA31972B0CC6500012E612 /* totoDatas.json */; };
-		13AA319B2B0CC70C0012E612 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA319A2B0CC70C0012E612 /* images.xcassets */; };
 		13AA319D2B0CC72F0012E612 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA319C2B0CC72F0012E612 /* colors.xcassets */; };
 		13AA31A12B0CCAEC0012E612 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31A02B0CCAEC0012E612 /* DataParser.swift */; };
 		13AA31A52B0CDA710012E612 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31A42B0CDA710012E612 /* ViewPresenter.swift */; };
@@ -30,6 +29,7 @@
 		13AA31BA2B0CE01B0012E612 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31B92B0CE01B0012E612 /* MenuService.swift */; };
 		13AA31BC2B0CE1390012E612 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31BB2B0CE1390012E612 /* MenuPresenter.swift */; };
 		13AA31BE2B0CE3490012E612 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31BD2B0CE3490012E612 /* API.swift */; };
+		13AA31C12B0CF41B0012E612 /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31C02B0CF41B0012E612 /* RoundedRectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		13AA31872B0CC4850012E612 /* DEMO_ChezTotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMO_ChezTotoUITests.swift; sourceTree = "<group>"; };
 		13AA31892B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMO_ChezTotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13AA31972B0CC6500012E612 /* totoDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = totoDatas.json; sourceTree = "<group>"; };
-		13AA319A2B0CC70C0012E612 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		13AA319C2B0CC72F0012E612 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		13AA31A02B0CCAEC0012E612 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		13AA31A42B0CDA710012E612 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		13AA31B92B0CE01B0012E612 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		13AA31BB2B0CE1390012E612 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		13AA31BD2B0CE3490012E612 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		13AA31C02B0CF41B0012E612 /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +127,12 @@
 		13AA31652B0CC4830012E612 /* DEMO_ChezToto */ = {
 			isa = PBXGroup;
 			children = (
+				13AA31662B0CC4830012E612 /* AppDelegate.swift */,
+				13AA31682B0CC4830012E612 /* SceneDelegate.swift */,
 				13AA319E2B0CC95C0012E612 /* Data */,
 				13AA31B02B0CDC340012E612 /* Domain */,
 				13AA31962B0CC61F0012E612 /* Resources */,
-				13AA31662B0CC4830012E612 /* AppDelegate.swift */,
-				13AA31682B0CC4830012E612 /* SceneDelegate.swift */,
+				13AA31BF2B0CF3FA0012E612 /* Classes */,
 				13AA316A2B0CC4830012E612 /* ViewController.swift */,
 				13AA316C2B0CC4830012E612 /* Main.storyboard */,
 				13AA316F2B0CC4850012E612 /* Assets.xcassets */,
@@ -162,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				13AA31992B0CC6A90012E612 /* JSON */,
-				13AA319A2B0CC70C0012E612 /* images.xcassets */,
 				13AA319C2B0CC72F0012E612 /* colors.xcassets */,
 			);
 			path = Resources;
@@ -255,6 +255,14 @@
 				13AA31B92B0CE01B0012E612 /* MenuService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		13AA31BF2B0CF3FA0012E612 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31C02B0CF41B0012E612 /* RoundedRectangleView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +374,6 @@
 				13AA31702B0CC4850012E612 /* Assets.xcassets in Resources */,
 				13AA319D2B0CC72F0012E612 /* colors.xcassets in Resources */,
 				13AA316E2B0CC4830012E612 /* Main.storyboard in Resources */,
-				13AA319B2B0CC70C0012E612 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +405,7 @@
 				13AA31AA2B0CDB6D0012E612 /* Dish.swift in Sources */,
 				13AA31AF2B0CDC0D0012E612 /* MenuDTO.swift in Sources */,
 				13AA31BE2B0CE3490012E612 /* API.swift in Sources */,
+				13AA31C12B0CF41B0012E612 /* RoundedRectangleView.swift in Sources */,
 				13AA31B72B0CDCF60012E612 /* Menu+Mappers.swift in Sources */,
 				13AA31AD2B0CDBBD0012E612 /* DishDTO.swift in Sources */,
 				13AA31B52B0CDC8F0012E612 /* Dish+Mappers.swift in Sources */,
