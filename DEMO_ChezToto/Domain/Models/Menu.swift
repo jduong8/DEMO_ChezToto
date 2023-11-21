@@ -11,3 +11,13 @@ struct Menu {
     let name: String
     let dishs: [Dish]
 }
+
+// MARK: - Mock
+extension Menu {
+    static var mockMenu: Menu {
+        Menu(
+            name: "Test",
+            dishs: Dish.mockDishs
+        )
+    }
+}
