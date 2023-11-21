@@ -8,6 +8,5 @@
 import Foundation
 
 protocol ViewPresenter {
-    func getStarters(dishs: [String])
-    func getPizzas(dishs: [String])
+    func getMenu(_ menu: [Menu])
 }
