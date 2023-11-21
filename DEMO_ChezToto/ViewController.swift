@@ -27,8 +27,39 @@ class ViewController: UIViewController {
         ])
         
         // Création de votre RoundedRectangleView
-        let roundedRectangle = RoundedRectangleView(frame: CGRect(x: 138, y: 107, width: 117, height: 68)) // Ajustez la taille et la position
+        let roundedRectangle = RoundedRectangleView(frame: CGRect(x: 138, y: 107, width: 117, height: 68))
         view.addSubview(roundedRectangle)
+        
+        let schedule: [(day: String, hours: String)] = [
+            ("Lundi", "Fermé"),
+            ("Mardi", "11h30 - 14h30 ・ 18h30 - 22h00"),
+            ("Mercredi", "11h30 - 14h30 ・ 18h30 - 22h00"),
+            ("Jeudi", "11h30 - 14h30 ・ 18h30 - 22h00"),
+            ("Vendredi", "11h30 - 14h30 ・ 18h30 - 22h00"),
+            ("Samedi", "11h30 - 14h30 ・ 18h30 - 22h00"),
+            ("Dimanche", "Fermé")
+        ]
+        var previousDayView: UIView? = nil
+
+        for (day, hours) in schedule {
+            let timeInfoView = TimeInfoView()
+            timeInfoView.translatesAutoresizingMaskIntoConstraints = false
+            timeInfoView.configure(day: day, time: hours)
+            view.addSubview(timeInfoView)
+
+            NSLayoutConstraint.activate([
+                timeInfoView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+                timeInfoView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+                timeInfoView.heightAnchor.constraint(equalToConstant: 15)
+            ])
+
+            if let previousDayView = previousDayView {
+                timeInfoView.topAnchor.constraint(equalTo: previousDayView.bottomAnchor, constant: 10).isActive = true
+            } else {
+                timeInfoView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
+            }
+
+            previousDayView = timeInfoView
+        }
     }
 }
-
