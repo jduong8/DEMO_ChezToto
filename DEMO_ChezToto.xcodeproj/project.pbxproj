@@ -20,6 +20,13 @@
 		13AA319B2B0CC70C0012E612 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA319A2B0CC70C0012E612 /* images.xcassets */; };
 		13AA319D2B0CC72F0012E612 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA319C2B0CC72F0012E612 /* colors.xcassets */; };
 		13AA31A12B0CCAEC0012E612 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31A02B0CCAEC0012E612 /* DataParser.swift */; };
+		13AA31A52B0CDA710012E612 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31A42B0CDA710012E612 /* ViewPresenter.swift */; };
+		13AA31AA2B0CDB6D0012E612 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31A92B0CDB6D0012E612 /* Dish.swift */; };
+		13AA31AD2B0CDBBD0012E612 /* DishDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31AC2B0CDBBD0012E612 /* DishDTO.swift */; };
+		13AA31AF2B0CDC0D0012E612 /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31AE2B0CDC0D0012E612 /* MenuDTO.swift */; };
+		13AA31B22B0CDC5F0012E612 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31B12B0CDC5F0012E612 /* Menu.swift */; };
+		13AA31B52B0CDC8F0012E612 /* Dish+Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31B42B0CDC8F0012E612 /* Dish+Mappers.swift */; };
+		13AA31B72B0CDCF60012E612 /* Menu+Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31B62B0CDCF60012E612 /* Menu+Mappers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,13 @@
 		13AA319A2B0CC70C0012E612 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		13AA319C2B0CC72F0012E612 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		13AA31A02B0CCAEC0012E612 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		13AA31A42B0CDA710012E612 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
+		13AA31A92B0CDB6D0012E612 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		13AA31AC2B0CDBBD0012E612 /* DishDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDTO.swift; sourceTree = "<group>"; };
+		13AA31AE2B0CDC0D0012E612 /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
+		13AA31B12B0CDC5F0012E612 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		13AA31B42B0CDC8F0012E612 /* Dish+Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+Mappers.swift"; sourceTree = "<group>"; };
+		13AA31B62B0CDCF60012E612 /* Menu+Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Mappers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				13AA319E2B0CC95C0012E612 /* Data */,
+				13AA31B02B0CDC340012E612 /* Domain */,
 				13AA31962B0CC61F0012E612 /* Resources */,
 				13AA31662B0CC4830012E612 /* AppDelegate.swift */,
 				13AA31682B0CC4830012E612 /* SceneDelegate.swift */,
@@ -158,6 +173,7 @@
 		13AA319E2B0CC95C0012E612 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				13AA31AB2B0CDBAF0012E612 /* DTO */,
 				13AA319F2B0CCADB0012E612 /* Parser */,
 			);
 			path = Data;
@@ -169,6 +185,59 @@
 				13AA31A02B0CCAEC0012E612 /* DataParser.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		13AA31A22B0CDA460012E612 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31A32B0CDA550012E612 /* Protocol */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		13AA31A32B0CDA550012E612 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31A42B0CDA710012E612 /* ViewPresenter.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		13AA31A62B0CDAB60012E612 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31A92B0CDB6D0012E612 /* Dish.swift */,
+				13AA31B12B0CDC5F0012E612 /* Menu.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13AA31AB2B0CDBAF0012E612 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31AC2B0CDBBD0012E612 /* DishDTO.swift */,
+				13AA31AE2B0CDC0D0012E612 /* MenuDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		13AA31B02B0CDC340012E612 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31B32B0CDC7E0012E612 /* Mappers */,
+				13AA31A22B0CDA460012E612 /* Presenter */,
+				13AA31A62B0CDAB60012E612 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		13AA31B32B0CDC7E0012E612 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31B42B0CDC8F0012E612 /* Dish+Mappers.swift */,
+				13AA31B62B0CDCF60012E612 /* Menu+Mappers.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +377,14 @@
 				13AA316B2B0CC4830012E612 /* ViewController.swift in Sources */,
 				13AA31672B0CC4830012E612 /* AppDelegate.swift in Sources */,
 				13AA31A12B0CCAEC0012E612 /* DataParser.swift in Sources */,
+				13AA31AA2B0CDB6D0012E612 /* Dish.swift in Sources */,
+				13AA31AF2B0CDC0D0012E612 /* MenuDTO.swift in Sources */,
+				13AA31B72B0CDCF60012E612 /* Menu+Mappers.swift in Sources */,
+				13AA31AD2B0CDBBD0012E612 /* DishDTO.swift in Sources */,
+				13AA31B52B0CDC8F0012E612 /* Dish+Mappers.swift in Sources */,
+				13AA31B22B0CDC5F0012E612 /* Menu.swift in Sources */,
 				13AA31692B0CC4830012E612 /* SceneDelegate.swift in Sources */,
+				13AA31A52B0CDA710012E612 /* ViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
