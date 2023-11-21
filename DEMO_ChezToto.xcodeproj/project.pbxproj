@@ -19,6 +19,7 @@
 		13AA31982B0CC6500012E612 /* totoDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = 13AA31972B0CC6500012E612 /* totoDatas.json */; };
 		13AA319B2B0CC70C0012E612 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA319A2B0CC70C0012E612 /* images.xcassets */; };
 		13AA319D2B0CC72F0012E612 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA319C2B0CC72F0012E612 /* colors.xcassets */; };
+		13AA31A12B0CCAEC0012E612 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31A02B0CCAEC0012E612 /* DataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		13AA31972B0CC6500012E612 /* totoDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = totoDatas.json; sourceTree = "<group>"; };
 		13AA319A2B0CC70C0012E612 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		13AA319C2B0CC72F0012E612 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
+		13AA31A02B0CCAEC0012E612 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		13AA31652B0CC4830012E612 /* DEMO_ChezToto */ = {
 			isa = PBXGroup;
 			children = (
+				13AA319E2B0CC95C0012E612 /* Data */,
 				13AA31962B0CC61F0012E612 /* Resources */,
 				13AA31662B0CC4830012E612 /* AppDelegate.swift */,
 				13AA31682B0CC4830012E612 /* SceneDelegate.swift */,
@@ -150,6 +153,22 @@
 				13AA31972B0CC6500012E612 /* totoDatas.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		13AA319E2B0CC95C0012E612 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				13AA319F2B0CCADB0012E612 /* Parser */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		13AA319F2B0CCADB0012E612 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31A02B0CCAEC0012E612 /* DataParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +307,7 @@
 			files = (
 				13AA316B2B0CC4830012E612 /* ViewController.swift in Sources */,
 				13AA31672B0CC4830012E612 /* AppDelegate.swift in Sources */,
+				13AA31A12B0CCAEC0012E612 /* DataParser.swift in Sources */,
 				13AA31692B0CC4830012E612 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
