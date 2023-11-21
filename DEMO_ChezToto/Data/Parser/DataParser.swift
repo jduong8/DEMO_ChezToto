@@ -8,22 +8,37 @@
 import Foundation
 
 protocol DataParserProtocol {
-    func parse<T: Decodable>(data: Data) throws -> T
+    func parse<T: Decodable>(_ filename: String) -> T
 }
 
 public class DataParser: DataParserProtocol {
+
     private let jsonDecoder: JSONDecoder
 
     public init(jsonDecoder: JSONDecoder = JSONDecoder()) {
         self.jsonDecoder = jsonDecoder
     }
+    
+    func parse<T: Decodable>(_ filename: String) -> T {
+        let data: Data
 
-    func parse<T: Decodable>(data: Data) throws -> T {
+        guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+            else {
+                fatalError("Couldn't find \(filename) in main bundle.")
+        }
+
         do {
-            return try jsonDecoder.decode(T.self, from: data)
+            data = try Data(contentsOf: file)
         } catch {
-            print(error)
-            throw URLError(.cannotDecodeRawData)
+            fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+        }
+
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
         }
     }
 }

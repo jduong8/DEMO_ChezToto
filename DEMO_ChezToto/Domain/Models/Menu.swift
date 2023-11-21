@@ -13,11 +13,25 @@ struct Menu {
 }
 
 // MARK: - Mock
+
 extension Menu {
     static var mockMenu: Menu {
         Menu(
             name: "Test",
             dishs: Dish.mockDishs
         )
+    }
+    
+    static var mockMenus: [Menu] {
+        [
+            Menu(
+                name: "Tata",
+                dishs: Dish.mockDishs
+            ),
+            Menu(
+                name: "Toto",
+                dishs: Dish.mockDishs
+            )
+        ]
     }
 }
