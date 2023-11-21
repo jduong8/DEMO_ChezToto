@@ -16,6 +16,7 @@
 		13AA317E2B0CC4850012E612 /* DEMO_ChezTotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA317D2B0CC4850012E612 /* DEMO_ChezTotoTests.swift */; };
 		13AA31882B0CC4850012E612 /* DEMO_ChezTotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31872B0CC4850012E612 /* DEMO_ChezTotoUITests.swift */; };
 		13AA318A2B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31892B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift */; };
+		13AA31982B0CC6500012E612 /* totoDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = 13AA31972B0CC6500012E612 /* totoDatas.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		13AA31832B0CC4850012E612 /* DEMO_ChezTotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMO_ChezTotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AA31872B0CC4850012E612 /* DEMO_ChezTotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMO_ChezTotoUITests.swift; sourceTree = "<group>"; };
 		13AA31892B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMO_ChezTotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13AA31972B0CC6500012E612 /* totoDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = totoDatas.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		13AA31652B0CC4830012E612 /* DEMO_ChezToto */ = {
 			isa = PBXGroup;
 			children = (
+				13AA31962B0CC61F0012E612 /* Resources */,
 				13AA31662B0CC4830012E612 /* AppDelegate.swift */,
 				13AA31682B0CC4830012E612 /* SceneDelegate.swift */,
 				13AA316A2B0CC4830012E612 /* ViewController.swift */,
@@ -125,6 +128,14 @@
 				13AA31892B0CC4850012E612 /* DEMO_ChezTotoUITestsLaunchTests.swift */,
 			);
 			path = DEMO_ChezTotoUITests;
+			sourceTree = "<group>";
+		};
+		13AA31962B0CC61F0012E612 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31972B0CC6500012E612 /* totoDatas.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13AA31732B0CC4850012E612 /* LaunchScreen.storyboard in Resources */,
+				13AA31982B0CC6500012E612 /* totoDatas.json in Resources */,
 				13AA31702B0CC4850012E612 /* Assets.xcassets in Resources */,
 				13AA316E2B0CC4830012E612 /* Main.storyboard in Resources */,
 			);
