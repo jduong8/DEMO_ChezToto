@@ -166,7 +166,13 @@ extension ViewController {
 
 extension ViewController {
     @objc private func goToMenu() {
-        print("Bouton menu cliqué")
+        let menuViewController = MenuViewController()
+        guard let navigationController = self.navigationController else {
+            print("No navigation controller")
+            return
+        }
+        
+        navigationController.pushViewController(menuViewController, animated: true)
     }
     
     @objc private func buttonTapped(_ sender: UIButton) {

@@ -32,6 +32,7 @@
 		13AA31C12B0CF41B0012E612 /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31C02B0CF41B0012E612 /* RoundedRectangleView.swift */; };
 		13AA31C32B0CFF7D0012E612 /* TimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31C22B0CFF7D0012E612 /* TimeInfoView.swift */; };
 		13AA31C52B0D119F0012E612 /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31C42B0D119F0012E612 /* ContactInfoView.swift */; };
+		13AA31C92B0E11D90012E612 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31C82B0E11D90012E612 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		13AA31C02B0CF41B0012E612 /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
 		13AA31C22B0CFF7D0012E612 /* TimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfoView.swift; sourceTree = "<group>"; };
 		13AA31C42B0D119F0012E612 /* ContactInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoView.swift; sourceTree = "<group>"; };
+		13AA31C82B0E11D90012E612 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +137,9 @@
 				13AA31682B0CC4830012E612 /* SceneDelegate.swift */,
 				13AA319E2B0CC95C0012E612 /* Data */,
 				13AA31B02B0CDC340012E612 /* Domain */,
+				13AA31C62B0E10B50012E612 /* Main */,
+				13AA31C72B0E11C40012E612 /* Menu */,
 				13AA31962B0CC61F0012E612 /* Resources */,
-				13AA31BF2B0CF3FA0012E612 /* Classes */,
-				13AA316A2B0CC4830012E612 /* ViewController.swift */,
 				13AA316C2B0CC4830012E612 /* Main.storyboard */,
 				13AA316F2B0CC4850012E612 /* Assets.xcassets */,
 				13AA31712B0CC4850012E612 /* LaunchScreen.storyboard */,
@@ -269,6 +271,23 @@
 				13AA31C42B0D119F0012E612 /* ContactInfoView.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		13AA31C62B0E10B50012E612 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31BF2B0CF3FA0012E612 /* Classes */,
+				13AA316A2B0CC4830012E612 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		13AA31C72B0E11C40012E612 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				13AA31C82B0E11D90012E612 /* MenuViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +436,7 @@
 				13AA31B72B0CDCF60012E612 /* Menu+Mappers.swift in Sources */,
 				13AA31AD2B0CDBBD0012E612 /* DishDTO.swift in Sources */,
 				13AA31B52B0CDC8F0012E612 /* Dish+Mappers.swift in Sources */,
+				13AA31C92B0E11D90012E612 /* MenuViewController.swift in Sources */,
 				13AA31B22B0CDC5F0012E612 /* Menu.swift in Sources */,
 				13AA31692B0CC4830012E612 /* SceneDelegate.swift in Sources */,
 				13AA31BC2B0CE1390012E612 /* MenuPresenter.swift in Sources */,
