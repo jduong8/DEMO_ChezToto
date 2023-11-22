@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .systemBackground
         setupBannerView()
         setupSchedulesView()
         setupContactInfosView()
@@ -165,7 +166,7 @@ extension ViewController {
 // MARK: - Private methods
 
 extension ViewController {
-    @objc private func goToMenu() {
+    private func goToMenu() {
         let menuViewController = MenuViewController()
         guard let navigationController = self.navigationController else {
             print("No navigation controller")
