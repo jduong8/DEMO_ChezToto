@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
@@ -48,8 +49,8 @@ class ViewController: UIViewController {
             view.addSubview(timeInfoView)
 
             NSLayoutConstraint.activate([
-                timeInfoView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
-                timeInfoView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+                timeInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+                timeInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
                 timeInfoView.heightAnchor.constraint(equalToConstant: 15)
             ])
 
@@ -61,5 +62,106 @@ class ViewController: UIViewController {
 
             previousDayView = timeInfoView
         }
+
+        let address = "12 Rue Tolbiac, 75013 Paris"
+
+        // Création et configuration de ContactInfoView
+        let contactAddress = ContactInfoView()
+        contactAddress.configure(withImage: "localisation", text: address) {
+            // Action pour le premier bouton
+            self.openMaps(withAddress: "12,Rue Tolbiac,Paris")
+        }
+        contactAddress.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(contactAddress)
+        
+        let contactURL = ContactInfoView()
+        contactURL.configure(withImage: "site", text: "www.cheztotopizza.fr") {
+            self.openURL(withURL: "http://www.cheztotopizza.fr")
+        }
+        contactURL.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(contactURL)
+        
+        let contactPhone = ContactInfoView()
+        contactPhone.configure(withImage: "phone", text: "0612345678") {
+            self.showCallAlert(phoneNumber: "0612345678")
+        }
+        contactPhone.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(contactPhone)
+        
+
+        // Configuration des contraintes pour ContactInfoView
+        NSLayoutConstraint.activate([
+            contactAddress.topAnchor.constraint(equalTo: previousDayView?.bottomAnchor ?? imageView.bottomAnchor, constant: 20),
+            contactAddress.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            contactAddress.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            contactURL.topAnchor.constraint(equalTo: contactAddress.bottomAnchor, constant: 2),
+            contactURL.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            contactURL.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            contactPhone.topAnchor.constraint(equalTo: contactURL.bottomAnchor, constant: 2),
+            contactPhone.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            contactPhone.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+        ])
+        
+        // Création et configuration de MKMapView
+        let mapView = MKMapView()
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.layer.cornerRadius = 20
+        mapView.overrideUserInterfaceStyle = .dark // Mode sombre
+        view.addSubview(mapView)
+
+        // Configuration des contraintes pour MKMapView
+        NSLayoutConstraint.activate([
+            mapView.widthAnchor.constraint(equalToConstant: 354),
+            mapView.heightAnchor.constraint(equalToConstant: 159),
+            mapView.topAnchor.constraint(equalTo: contactPhone.topAnchor, constant: 50),
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 19)
+        ])
+
+        // Configurer la carte pour pointer sur une adresse
+        setMapLocation(mapView, address: address)
+    }
+    
+    private func setMapLocation(_ mapView: MKMapView, address: String) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { placemarks, error in
+            guard let placemark = placemarks?.first, let location = placemark.location else {
+                print("Adresse introuvable: \(error?.localizedDescription ?? "Erreur inconnue")")
+                return
+            }
+
+            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+            mapView.setRegion(region, animated: true)
+
+            // Ajout d'un marqueur sur la carte
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location.coordinate
+            annotation.title = address
+            mapView.addAnnotation(annotation)
+        }
+    }
+
+    private func openMaps(withAddress address: String) {
+        if let url = URL(string: "http://maps.apple.com/?address=\(address)") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    private func openURL(withURL urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    private func showCallAlert(phoneNumber: String) {
+        let alert = UIAlertController(title: "Lancer un appel", message: "Voulez-vous appeler \(phoneNumber)?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Annuler", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Appeler", style: .default, handler: { _ in
+            if let phoneCallURL = URL(string: "\(phoneNumber)") {
+                UIApplication.shared.open(phoneCallURL)
+            }
+        }))
+        present(alert, animated: true, completion: nil)
     }
 }
