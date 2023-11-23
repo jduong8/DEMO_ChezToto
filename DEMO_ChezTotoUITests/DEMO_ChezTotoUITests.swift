@@ -22,10 +22,13 @@ final class DEMO_ChezTotoUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testMenuButtonTap() throws {
         let app = XCUIApplication()
         app.launch()
+        
+        let menuButton = app.buttons["Accéder au menu"]
+        XCTAssertTrue(menuButton.exists, "Le bouton du menu n'existe pas")
+        menuButton.tap()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
