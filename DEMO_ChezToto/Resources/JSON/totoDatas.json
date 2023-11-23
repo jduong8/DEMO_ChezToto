@@ -6,13 +6,13 @@
                 "name": "Garlic bread",
                 "description": "Du pain legèrement croustillant parfumé à l’ail",
                 "pictureName": "garlicBread",
-                "price": 3.5
+                "price": 3.50
             },
             {
                 "name": "Potatoes",
-                "description": "Du pain legèrement croustillant parfumé à l’ail",
+                "description": "Quartiers de pommes de terre dorés au four",
                 "pictureName": "potatoes",
-                "price": 3.5
+                "price": 3.50
             }
         ]
     },
@@ -21,27 +21,27 @@
         "dishs": [
             {
                 "name": "Margarita",
-                "description": "Du pain legèrement croustillant parfumé à l’ail",
+                "description": "La classique base tomate et fromage",
                 "pictureName": "margarita",
                 "price": 10
             },
             {
                 "name": "Végétarienne",
-                "description": "Du pain legèrement croustillant parfumé à l’ail",
+                "description": "Base tomate, légumes de saison et fromage",
                 "pictureName": "vege",
                 "price": 12
             },
             {
                 "name": "Peperoni",
-                "description": "Du pain legèrement croustillant parfumé à l’ail",
+                "description": "Base tomate, peperoni et fromage",
                 "pictureName": "peperoni",
-                "price": 13.5
+                "price": 13.50
             },
             {
                 "name": "4 fromages",
-                "description": "Du pain legèrement croustillant parfumé à l’ail",
+                "description": "Base crème, emmental, morbier, chèvre et gorgonzola",
                 "pictureName": "4fromages",
-                "price": 12.5
+                "price": 12.50
             }
         ]
     }

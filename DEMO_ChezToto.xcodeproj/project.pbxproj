@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13A5EC152B0F9BF9007DE694 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5EC142B0F9BF9007DE694 /* ViewModel.swift */; };
+		13A5EC172B0F9DB5007DE694 /* DishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5EC162B0F9DB5007DE694 /* DishTableViewCell.swift */; };
 		13AA31672B0CC4830012E612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31662B0CC4830012E612 /* AppDelegate.swift */; };
 		13AA31692B0CC4830012E612 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA31682B0CC4830012E612 /* SceneDelegate.swift */; };
 		13AA316B2B0CC4830012E612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA316A2B0CC4830012E612 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13A5EC142B0F9BF9007DE694 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		13A5EC162B0F9DB5007DE694 /* DishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTableViewCell.swift; sourceTree = "<group>"; };
 		13AA31632B0CC4830012E612 /* DEMO_ChezToto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO_ChezToto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AA31662B0CC4830012E612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13AA31682B0CC4830012E612 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13A5EC122B0F9B78007DE694 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				13A5EC142B0F9BF9007DE694 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13A5EC132B0F9B7F007DE694 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				13A5EC162B0F9DB5007DE694 /* DishTableViewCell.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		13AA315A2B0CC4830012E612 = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +305,8 @@
 		13AA31C72B0E11C40012E612 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				13A5EC132B0F9B7F007DE694 /* Classes */,
+				13A5EC122B0F9B78007DE694 /* ViewModel */,
 				13AA31C82B0E11D90012E612 /* MenuViewController.swift */,
 			);
 			path = Menu;
@@ -424,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13AA316B2B0CC4830012E612 /* ViewController.swift in Sources */,
+				13A5EC172B0F9DB5007DE694 /* DishTableViewCell.swift in Sources */,
 				13AA31C52B0D119F0012E612 /* ContactInfoView.swift in Sources */,
 				13AA31672B0CC4830012E612 /* AppDelegate.swift in Sources */,
 				13AA31BA2B0CE01B0012E612 /* MenuService.swift in Sources */,
@@ -434,6 +457,7 @@
 				13AA31BE2B0CE3490012E612 /* API.swift in Sources */,
 				13AA31C12B0CF41B0012E612 /* RoundedRectangleView.swift in Sources */,
 				13AA31B72B0CDCF60012E612 /* Menu+Mappers.swift in Sources */,
+				13A5EC152B0F9BF9007DE694 /* ViewModel.swift in Sources */,
 				13AA31AD2B0CDBBD0012E612 /* DishDTO.swift in Sources */,
 				13AA31B52B0CDC8F0012E612 /* Dish+Mappers.swift in Sources */,
 				13AA31C92B0E11D90012E612 /* MenuViewController.swift in Sources */,
